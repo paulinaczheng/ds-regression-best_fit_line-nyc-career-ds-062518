@@ -2,7 +2,7 @@
 # Calculating slope and intercept for best fit line
 
 ## SWBAT
-* Calculate the slope of a line using standard slope formula 
+* Calculate the slope of a line using standard slope formula
 * Calculate the y-intercept using the slope value
 * Draw a regression line based on calculated slope and intercept
 * Predict the label of a previously unseen data element
@@ -11,14 +11,14 @@
 
 ## Introduction
 
-Regression analysis forms the basis of machine learning experiments. Understanding regression will help you to get the foundations of most machine learing algorithms. Ever wondered what's at the heart of an artificil neural network processing unstructured data like music and graphics ! Its lienar regression.
+Regression analysis forms the basis of machine learning experiments. Understanding regression will help you to get the foundations of most machine learning algorithms. Ever wondered what's at the heart of an artificial neural network processing unstructured data like music and graphics? It can be linear regression!
 
-A first step towards understanding regression is getting a clear idea about "linear" regression and basic linear algebra. 
+A first step towards understanding regression is getting a clear idea about "linear" regression and basic linear algebra.
 
 The calculation for the best-fit line's slope, `m` is calculated as :
 ![](best-fit-slope.png)
 
-As our previous lesson, let's break down the formula into its parts. First we shall import the required libraries and define some data points to work with. 
+As in our previous lesson, let's break down the formula into its parts. First we shall import the required libraries and define some data points to work with.
 
 
 ```python
@@ -44,12 +44,15 @@ Y = None
 
 ```
 
-In a data analysis context, we can think of these points as vector x being the features and vector y being the labels for given features. 
+In a data analysis context, we can think of these points as two vectors:
+
+* **vector X**: the features of our model
+* **vector Y**: the labels for given features
 
 
 ```python
 def calc_slope(xs,ys):
-    
+
     # Use the slope formula above and calculate the slope
     m = None
     return m
@@ -66,11 +69,11 @@ As a reminder, the calculation for the best-fit line's y-intercept is:
 
 ```python
 def best_fit(xs,ys):
-    
+
     # use the slope function with intercept formula to return calculate slop and intercept from data points
     m = None
     b = None
-    
+
     return m, b
 
 m, b = best_fit(X,Y)
@@ -85,14 +88,14 @@ m,b
 
 
 
-We now have a working model with `m` and `b` as model parameters. We can create a line for the data points using calculated slope and intercept:
+We now have a working model with `m` and `b` as model parameters. We can create a line for the data points using the calculated slope and intercept:
 
-Recall that `y=mx+b`. We can now use slope and ingercept values along with X data points (features) to calculate the Y data points (labels) ofr the regression line. 
+* Recall that `y=mx+b`. We can now use slope and intercept values along with X data points (features) to calculate the Y data points (labels) of the regression line.
 
 
 ```python
 def reg_line (m, b, xs):
-    
+
     return None
 
 regression_line = reg_line(m,b,X)
@@ -113,9 +116,9 @@ Now that we have calculated the regression line, we can plot the data points and
 
 So, how might you go about actually making a prediction based on this model you just made?
 
-Now that we have a working model with m and b as model parameters. We can fill in a value of x with these parameters to identify a corrosponding value of y according to our model.  
+Now that we have a working model with m and b as model parameters. We can fill in a value of x with these parameters to identify a corresponding value of y according to our model.  
 
-Let's try to find a y prediction for a new value of x = 7 and unknown y, and plot the new prediction with existing data 
+Let's try to find a y prediction for a new value of x = 7 and unknown y, and plot the new prediction with existing data
 
 
 ```python
@@ -144,4 +147,4 @@ We now know how to create our own models, which is great, but we're stilling mis
 
 ## Summary
 
-In this lesson, we learnt how we can draw a best fit line for given data labels and features , by first calculating the slope and intercept. The calculated regression line was then used to predict the label (y-value) of a previously unseen feature (x-value). The lesson uses a simple set of data points for demonstration. Students should be able to plug in other datasets and practice with predictions for accuracy. 
+In this lesson, we learnt how we can draw a best fit line for given data labels and features, by first calculating the slope and intercept. The calculated regression line was then used to predict the label (y-value) of a previously unseen feature (x-value). The lesson uses a simple set of data points for demonstration. Students should be able to plug in other datasets and practice with predictions for accuracy.
